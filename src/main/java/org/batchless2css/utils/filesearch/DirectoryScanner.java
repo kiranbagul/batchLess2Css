@@ -10,7 +10,7 @@ import java.util.List;
 
 public class DirectoryScanner {
    private File file;
-   private Collection filters = new HashSet();
+   private Collection<Filter> filters = new HashSet<Filter>();
 
    public DirectoryScanner(File file) {
        this.file = file;
@@ -22,7 +22,7 @@ public class DirectoryScanner {
    }
    
    public File[] scan() {
-       final List results = new ArrayList();
+       final List<File> results = new ArrayList<File>();
        walk(new FileVisitor() {
            public void visitFile(File file) {
                results.add(file);
@@ -40,8 +40,8 @@ public class DirectoryScanner {
                walk(visitor, currentFiles[i]);
            }
        } else {
-           for (Iterator iterator = this.filters.iterator(); iterator.hasNext();) {
-               Filter filter = (Filter) iterator.next();
+           for (Iterator<Filter> iterator = this.filters.iterator(); iterator.hasNext();) {
+               Filter filter = iterator.next();
                if (!filter.filter(current)) {
                    return;
                }

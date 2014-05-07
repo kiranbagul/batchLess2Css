@@ -15,7 +15,7 @@ public class Compiler {
 	@Option(name="-exclude", usage="file match pattern to exclude in directory scan, default : .module.less")
 	private static String excludes = DefaultEnvProperties.EXCLUDES;
 	
-	@Option(name="-force", usage="if false, compile only when file input file is changed (including the imports), defaut : false")
+	@Option(name="-force", usage="if false, compile only when file input file is changed (including the imports), default : false")
 	private static boolean forceOverwrite = DefaultEnvProperties.FORCE_OVERWRITE;
 	
 	@Option(name="-threads", usage="no of threads used for preocessing, default : 6")

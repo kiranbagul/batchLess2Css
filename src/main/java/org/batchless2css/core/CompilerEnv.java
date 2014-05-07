@@ -35,8 +35,9 @@ public class CompilerEnv {
 		SingletonHolder.INSTANCE.setCompress(compress);
 	}
 
-	public static void processError(String msg) {
+	public static void processError(String msg, Exception e) {
 		LOGGER.severe(msg);
+		e.printStackTrace();
 		if (isFailOnError()) {
 			System.exit(1);
 		}

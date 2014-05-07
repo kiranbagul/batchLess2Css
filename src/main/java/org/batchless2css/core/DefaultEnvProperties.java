@@ -9,7 +9,7 @@ public interface DefaultEnvProperties {
 	
 	String EXCLUDES = ".module.less";
 	
-	boolean FORCE_OVERWRITE = true;
+	boolean FORCE_OVERWRITE = false;
 	
 	int NO_OF_THREADS = 6;
 	
