@@ -53,6 +53,44 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+		            <groupId>org.apache.maven.plugins</groupId>
+		            <artifactId>maven-install-plugin</artifactId>
+		            <executions>
+		                <execution>
+		                    <id>Install LessCss</id>
+		                    <phase>initialize</phase>
+		                    <goals>
+		                        <goal>install-file</goal>
+		                    </goals>
+		                    <configuration>
+		                        <localRepositoryPath>lib/repo</localRepositoryPath>
+		                        <createChecksum>true</createChecksum>
+		                        <packaging>jar</packaging>
+		                        <file>lib/lesscss-1.5.1.jar</file>
+		                        <groupId>org.lesscss</groupId>
+		                        <artifactId>org.lesscss</artifactId>
+		                        <version>1.5.1</version>
+		                    </configuration>
+		                </execution>
+		                <execution>
+		                    <id>Install args4j</id>
+		                    <phase>initialize</phase>
+		                    <goals>
+		                        <goal>install-file</goal>
+		                    </goals>
+		                    <configuration>
+		                        <localRepositoryPath>lib/repo</localRepositoryPath>
+		                        <createChecksum>true</createChecksum>
+		                        <packaging>jar</packaging>
+		                        <file>lib/args4j-2.0.26.jar</file>
+		                        <groupId>args4j</groupId>
+		                        <artifactId>args4j</artifactId>
+		                        <version>2.0.26</version>
+		                    </configuration>
+		                </execution>
+		            </executions>
+		        </plugin>            
 		</plugins>
 	</build>
 </project>
