@@ -63,6 +63,10 @@ Abhishek Ash (ash.abhishek@gmail.com)
 
 Libraries Used
 --------------
-args4j
+args4j, 
 lesscss-java
+
+License
+-------
+MIT License (MIT)
 
