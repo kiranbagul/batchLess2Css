@@ -7,23 +7,13 @@ batchLess2Css compiler can be used when large number of LESS files needs to be c
 
 Building from source
 --------------------
-Create local maven reposotory for dependencies used
+Initialize local maven repository 
 
-Run following command from base directory
+	mvn initialize
 
-	mvn install:install-file -DlocalRepositoryPath=lib/repo \
-	  -DcreateChecksum=true -Dpackaging=jar \
-	  -Dfile=lib/lesscss-1.5.1.jar -DgroupId=org.lesscss \
-	  -DartifactId=org.lesscss -Dversion=1.5.1
-	  
-	mvn install:install-file -DlocalRepositoryPath=lib/repo \
-	  -DcreateChecksum=true -Dpackaging=jar \
-	  -Dfile=lib/args4j-2.0.26.jar -DgroupId=args4j \
-	  -DartifactId=args4j -Dversion=2.0.26
+Generate executable jar with dependencies file
 
-
-Generate executable jar file : 
-mvn clean install 
+	mvn clean install 
 
 Command Line Usage 
 ------------------
