@@ -1,4 +1,4 @@
-package in.kiranbagul.utils.logging;
+package in.kiranbagul.batchless2css.utils.logging;
 
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Handler;

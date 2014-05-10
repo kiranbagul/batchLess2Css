@@ -6,3 +6,5 @@
 *.ipr
 target/
 lib/repo
+*.releaseBackup
+release.properties

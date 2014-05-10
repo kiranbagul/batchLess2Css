@@ -1,6 +1,6 @@
-package in.kiranbagul.core;
+package in.kiranbagul.batchless2css.core;
 
-import in.kiranbagul.utils.logging.LoggerFactory;
+import in.kiranbagul.batchless2css.utils.logging.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;

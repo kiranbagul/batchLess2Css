@@ -1,8 +1,8 @@
-package in.kiranbagul.core;
+package in.kiranbagul.batchless2css.core;
 
-import in.kiranbagul.utils.filesearch.DirectoryScanner;
-import in.kiranbagul.utils.filesearch.FileVisitor;
-import in.kiranbagul.utils.logging.LoggerFactory;
+import in.kiranbagul.batchless2css.utils.filesearch.DirectoryScanner;
+import in.kiranbagul.batchless2css.utils.filesearch.FileVisitor;
+import in.kiranbagul.batchless2css.utils.logging.LoggerFactory;
 
 import java.io.File;
 import java.util.HashSet;

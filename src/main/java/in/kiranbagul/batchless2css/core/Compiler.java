@@ -1,4 +1,4 @@
-package in.kiranbagul.core;
+package in.kiranbagul.batchless2css.core;
 
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;

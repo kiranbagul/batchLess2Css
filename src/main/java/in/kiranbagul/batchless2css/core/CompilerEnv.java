@@ -1,8 +1,8 @@
-package in.kiranbagul.core;
+package in.kiranbagul.batchless2css.core;
 
-import in.kiranbagul.utils.filesearch.Filter;
-import in.kiranbagul.utils.filesearch.LessFileFilter;
-import in.kiranbagul.utils.logging.LoggerFactory;
+import in.kiranbagul.batchless2css.utils.filesearch.Filter;
+import in.kiranbagul.batchless2css.utils.filesearch.LessFileFilter;
+import in.kiranbagul.batchless2css.utils.logging.LoggerFactory;
 
 import java.util.logging.Logger;
 

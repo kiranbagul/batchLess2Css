@@ -1,4 +1,4 @@
-package in.kiranbagul.core;
+package in.kiranbagul.batchless2css.core;
 
 
 public interface DefaultEnvProperties {
