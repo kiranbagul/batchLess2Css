@@ -1,10 +1,11 @@
-package org.batchless2css.core;
+package in.kiranbagul.core;
+
+import in.kiranbagul.utils.filesearch.Filter;
+import in.kiranbagul.utils.filesearch.LessFileFilter;
+import in.kiranbagul.utils.logging.LoggerFactory;
 
 import java.util.logging.Logger;
 
-import org.batchless2css.utils.filesearch.Filter;
-import org.batchless2css.utils.filesearch.LessFileFilter;
-import org.batchless2css.utils.logging.LoggerFactory;
 import org.lesscss.LessCompiler;
 
 public class CompilerEnv {

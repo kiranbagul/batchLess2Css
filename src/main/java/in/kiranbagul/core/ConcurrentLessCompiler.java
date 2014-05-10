@@ -1,4 +1,8 @@
-package org.batchless2css.core;
+package in.kiranbagul.core;
+
+import in.kiranbagul.utils.filesearch.DirectoryScanner;
+import in.kiranbagul.utils.filesearch.FileVisitor;
+import in.kiranbagul.utils.logging.LoggerFactory;
 
 import java.io.File;
 import java.util.HashSet;
@@ -11,9 +15,6 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import org.batchless2css.utils.filesearch.DirectoryScanner;
-import org.batchless2css.utils.filesearch.FileVisitor;
-import org.batchless2css.utils.logging.LoggerFactory;
 
 public class ConcurrentLessCompiler {
 	

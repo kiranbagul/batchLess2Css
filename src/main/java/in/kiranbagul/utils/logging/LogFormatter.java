@@ -1,4 +1,4 @@
-package org.batchless2css.utils.logging;
+package in.kiranbagul.utils.logging;
 
 import java.util.logging.Formatter;
 import java.util.logging.LogRecord;

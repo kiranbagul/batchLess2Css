@@ -1,11 +1,12 @@
-package org.batchless2css.core;
+package in.kiranbagul.core;
+
+import in.kiranbagul.utils.logging.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.Callable;
 import java.util.logging.Logger;
 
-import org.batchless2css.utils.logging.LoggerFactory;
 import org.lesscss.LessSource;
 
 public class LessFileCompiler implements Callable<Boolean>{
