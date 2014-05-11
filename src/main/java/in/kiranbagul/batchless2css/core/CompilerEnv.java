@@ -4,6 +4,7 @@ import in.kiranbagul.batchless2css.utils.filesearch.Filter;
 import in.kiranbagul.batchless2css.utils.filesearch.LessFileFilter;
 import in.kiranbagul.batchless2css.utils.logging.LoggerFactory;
 
+import java.io.File;
 import java.util.logging.Logger;
 
 import org.lesscss.LessCompiler;
@@ -38,7 +39,9 @@ public class CompilerEnv {
 
 	public static void processError(String msg, Exception e) {
 		LOGGER.severe(msg);
-		e.printStackTrace();
+		if(null!=e){
+			e.printStackTrace();			
+		}
 		if (isFailOnError()) {
 			System.exit(1);
 		}
@@ -77,7 +80,11 @@ public class CompilerEnv {
 	}
 
 	public static void setInputFilesPath(String inputFilesPath) {
-		CompilerEnv.inputFilesPath = inputFilesPath;
+		if(new File(inputFilesPath).exists()){
+			CompilerEnv.inputFilesPath = inputFilesPath;
+		}else{
+			processError("Input path does not exists.", null);
+		}
 	}
 
 	public static String getIncludes() {

@@ -12,7 +12,7 @@ public class Compiler {
 	@Option(name="-include", usage="file match pattern to include in directory scan, default : .less")
 	private static String includes = DefaultEnvProperties.INCLUDES;
 	
-	@Option(name="-exclude", usage="file match pattern to exclude in directory scan, default : .module.less")
+	@Option(name="-exclude", usage="comma seperated file match pattern to exclude in directory scan")
 	private static String excludes = DefaultEnvProperties.EXCLUDES;
 	
 	@Option(name="-force", usage="if false, compile only when file input file is changed (including the imports), default : false")

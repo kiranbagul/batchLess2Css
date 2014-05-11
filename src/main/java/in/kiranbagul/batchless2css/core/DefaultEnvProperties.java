@@ -7,7 +7,7 @@ public interface DefaultEnvProperties {
 	
 	String INCLUDES = ".less";
 	
-	String EXCLUDES = ".module.less";
+	String EXCLUDES = "";
 	
 	boolean FORCE_OVERWRITE = false;
 	
