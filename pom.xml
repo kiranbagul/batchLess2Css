@@ -20,19 +20,19 @@
 		<artifactId>oss-parent</artifactId>
 		<version>7</version>
 	</parent>
-	<distributionManagement>
-		<!-- Repository for snapshots -->
+<!-- 	<distributionManagement>
+		Repository for snapshots
 		<snapshotRepository>
 			<id>sonatype-nexus-snapshots</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
-		<!-- Repository for releases -->
+		Repository for releases
 		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus Release Repository</name>
 			<url> https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
 		</repository>
-	</distributionManagement>
+	</distributionManagement> -->
 	<dependencies>
 		<dependency>
 			<artifactId>org.lesscss</artifactId>
