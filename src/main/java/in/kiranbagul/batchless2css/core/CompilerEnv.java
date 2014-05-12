@@ -21,12 +21,21 @@ public class CompilerEnv {
 	private static String excludes = DefaultEnvProperties.EXCLUDES;
 	private static String outputas = DefaultEnvProperties.OUTPUT_AS;
 	private static int noOfThreads = DefaultEnvProperties.NO_OF_THREADS;
+	private static String[] folderMapArray = DefaultEnvProperties.FOLDER_MAP;
 
 	private CompilerEnv() {
 	}
 
 	private static class SingletonHolder {
 		private static final LessCompiler INSTANCE = new LessCompiler();
+	}
+	
+	public static String[] getFolderMapArray() {
+		return folderMapArray;
+	}
+
+	public static void setFolderMap(String folderMap) {
+		CompilerEnv.folderMapArray = folderMap.split(",");
 	}
 
 	public static LessCompiler getInstance() {
@@ -85,6 +94,16 @@ public class CompilerEnv {
 		}else{
 			processError("Input path does not exists.", null);
 		}
+	}
+	
+
+	public static String getOutputFileName(String filename) {
+		String outputFileName = filename.replace(".less", CompilerEnv.getOutputas());
+		for(String mapEntry : CompilerEnv.getFolderMapArray()){
+			String[] entryMap = mapEntry.split("#");
+			outputFileName = outputFileName.replace(entryMap[0], entryMap[1]);
+		}
+		return outputFileName;
 	}
 
 	public static String getIncludes() {

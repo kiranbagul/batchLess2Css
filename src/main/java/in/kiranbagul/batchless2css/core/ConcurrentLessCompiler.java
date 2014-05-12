@@ -48,12 +48,12 @@ public class ConcurrentLessCompiler {
 	}
 
 	private void processFile(ExecutorService executor, File file) {
-		File outputFile = new File(file.getAbsolutePath().replace(".less", CompilerEnv.getOutputas()));
+		File outputFile = new File(CompilerEnv.getOutputFileName(file.getAbsolutePath()));
 		Callable<Boolean> compilerThread = new LessFileCompiler(file, outputFile);
 		Future<Boolean> future = executor.submit(compilerThread);
 		set.add(future);
 	}
-
+	
 	private void logTime(int count) {
 		long diffInMS = (System.currentTimeMillis() - startTime);
 		LOGGER.info(String.format(

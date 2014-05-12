@@ -19,4 +19,6 @@ public interface DefaultEnvProperties {
 	
 	boolean FAIL_ON_ERROR = true;
 
+	String[] FOLDER_MAP = {};
+
 }

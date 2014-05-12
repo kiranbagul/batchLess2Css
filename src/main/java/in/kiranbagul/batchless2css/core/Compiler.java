@@ -30,6 +30,11 @@ public class Compiler {
 	@Option(name="-failOnError", usage="terminate if compilation error occurs, default : true")
 	private static boolean failOnError = DefaultEnvProperties.FAIL_ON_ERROR;
 	
+	@Option(name="-mapFolder", usage="Ex. /less/#/css/; if string 'less' is found in filepath, replace the it with 'css', " +
+			"and generated css files with put in new mapped folder.\n" +
+			"Allows comma seperated multiple values.")
+	private static String folderMap = "";
+	
 	public static void main(String[] args) {
 		if(parseCmdLineArgs(args)){
 			process();
@@ -58,6 +63,7 @@ public class Compiler {
 		CompilerEnv.setCompress(compress);
 		CompilerEnv.setFailOnError(failOnError);
 		CompilerEnv.setForceOverwrite(forceOverwrite);
+		CompilerEnv.setFolderMap(folderMap);
 		new ConcurrentLessCompiler().start();
 	}
 
