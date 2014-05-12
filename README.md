@@ -18,7 +18,7 @@ Generate executable jar with dependencies file
 Command Line Usage 
 ------------------
 
-	java -jar batchless2css-0.0.1-SNAPSHOT-jar-with-dependencies.jar 
+	java -jar batchless2css-0.0.1-SNAPSHOT-jar-with-dependencies.jar -force -path=path/to/folder -compress
 
 	 -compress     : compress css files, default : false
 	 -exclude      : file match pattern to exclude in directory scan, default : .module.less
@@ -29,6 +29,9 @@ Command Line Usage
 	 -outputas     : string will appended to output file, default : .gen.css
 	 -path         : file match pattern to include in directory scan, default : current directory
 	 -threads      : no of threads used for processing, default : 6
+	 -mapFolder    : Ex. /less/#/css/ if string '/less/' is found in filepath, replace the it with '/css/', 
+	 		 Generated css files with put in new mapped folder. 
+	 		 Allows comma seperated multiple values Ex. /less/#/css/,/lessmodules/#/cssmodules/
  
 Java Usage
 ----------
