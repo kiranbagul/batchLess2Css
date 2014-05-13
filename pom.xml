@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>in.kiranbagul</groupId>
 	<artifactId>batchless2css</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<packaging>jar</packaging>
 	<name>Batch Less to CSS Compiler</name>
 	<repositories>
