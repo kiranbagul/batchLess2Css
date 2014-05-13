@@ -101,7 +101,9 @@ public class CompilerEnv {
 		String outputFileName = filename.replace(".less", CompilerEnv.getOutputas());
 		for(String mapEntry : CompilerEnv.getFolderMapArray()){
 			String[] entryMap = mapEntry.split("#");
-			outputFileName = outputFileName.replace(entryMap[0], entryMap[1]);
+			if(entryMap.length>1){
+				outputFileName = outputFileName.replace(entryMap[0], entryMap[1]);
+			}
 		}
 		return outputFileName;
 	}
