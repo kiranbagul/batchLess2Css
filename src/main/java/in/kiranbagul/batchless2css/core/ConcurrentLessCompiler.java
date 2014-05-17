@@ -23,7 +23,7 @@ public class ConcurrentLessCompiler {
 	
 	private long startTime;
 	
-	protected void start() {
+	public void start() {
 		LOGGER.info("Compiling LESS files from "+CompilerEnv.getInputFilesPath());
 		startTimer();
 		final ExecutorService executor = Executors.newFixedThreadPool(CompilerEnv.getNoOfThreads());
